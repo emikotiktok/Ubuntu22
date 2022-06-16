@@ -12,57 +12,41 @@ clear
 
 figlet I BACK EMIKO TIKTOK | lolcat -a -d 13  -F 0.1 -t -p 3.0 -S 1  -f
 
-# Purpose: center-message.sh - Display centered text in the screen in reverse video
 
-# Author: Vivek Gite 
 
-# ---------------------------------------------------------------------------------
 
-# Find out current screen width and hight
 
-_COLUMNS=$(tput cols)
 
-_LINES=$(tput lines)
 
-# Set default message if $1 input not provided
 
-_MESSAGE="${1:-Welcome To EMIKO TIKTOK ❤️❤️}"
 
-# Calculate x and y coordinates so that we can display $MESSAGE
 
-# centered in the screen 
 
-x=$(( $_LINES / 2 ))
 
-y=$(( ( $_COLUMNS - ${#_MESSAGE} )  / 2 ))
 
-# Clear the screen
 
-tput clear
 
-# set x and y position
 
-tput cup $x $y
 
-# set reverse video mode
 
-tput rev
 
-# Alright display message stored in $_MESSAGE
 
-echo "${_MESSAGE}"
 
-# Just wait for user input...
 
-read -p "" readDamKey 
 
-# Start cleaning up our screen...
 
-tput clear
 
-tput sgr0
 
-tput rc
+
+
+
+
+
+
+
+
+
+
 
 clear
 
